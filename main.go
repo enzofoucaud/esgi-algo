@@ -23,7 +23,6 @@ func main() {
 	if len(dijkstraPath) < 1 {
 		fmt.Println("La source ou destination ne peuvent pas s'atteindre")
 	} else {
-		fmt.Println("Le chemin avec Dijkstra coûte ", costDijkstra)
 		for i, s := range dijkstraPath {
 			fmt.Print(s)
 			if i != len(dijkstraPath)-1 {
@@ -31,6 +30,7 @@ func main() {
 			}
 		}
 		fmt.Println()
+		fmt.Println("Le chemin avec Dijkstra coûte ", costDijkstra)
 	}
 	// Prims
 	fmt.Println("----- Algorithme de Prims -----")
@@ -38,10 +38,10 @@ func main() {
 	if len(primsPath) < 1 {
 		fmt.Println("La source ou destination ne peuvent pas s'atteindre")
 	} else {
-		fmt.Println("Le chemin avec Prims coûte ", costPrim)
 		for _, p := range primsPath {
 			fmt.Println("Départ de", p.From, "vers", p.To, "avec un poid de", p.weight)
 		}
+		fmt.Println("Le chemin avec Prims coûte ", costPrim)
 	}
 	// Kruskal
 	fmt.Println("----- Algorithme de Kruskal -----")
